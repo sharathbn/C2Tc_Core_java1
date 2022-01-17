@@ -7,7 +7,7 @@ public class ExceptionHandlingDemo2 {
 		int[] arr=new int[4];
 		try
 		{			
-			arr[3]=35;
+			arr[5]=35;
 			System.out.println("In try block");
 		}
 		catch(ArrayIndexOutOfBoundsException ae)

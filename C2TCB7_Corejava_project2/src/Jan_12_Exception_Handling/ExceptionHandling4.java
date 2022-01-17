@@ -13,7 +13,7 @@ public class ExceptionHandling4 {
 	{
 		try
 		{
-	validate(7);
+	validate(2);
 		}
 		catch(ArithmeticException ae)
 		{
