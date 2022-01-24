@@ -18,7 +18,7 @@ public class StringBufferDemo {
 	
 	StringBuffer sb2=new StringBuffer("Java Programming");
 	System.out.println(sb2);
-	sb2.replace(0, 4, "C");
+	sb2.replace(0 , 1, "C");
 	System.out.println(sb2);
 	
 	System.out.println(sb2.hashCode());
