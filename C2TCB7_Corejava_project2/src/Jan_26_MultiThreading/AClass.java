@@ -5,16 +5,32 @@ public class AClass {
 	
 synchronized void deposit(int amt)
 {
+	
 	System.out.println("Getting balance...");
 	int oldbal=getBalance();
 	bal=oldbal+amt;
-	setBalance(bal);
+	//setBalance(bal);
 }
+
+
+	//Account.Balance=amt;
+synchronized void withdraw(int amt) {
+	System.out.println("Getting Balance...");
+	int oldbal=getBalance();
+	if(amt>oldbal)
+	{
+		System.out.println("InsufficientBalance!");
+	}
+	else {
+		bal=oldbal-amt;
+	}
+	//setBalance(bal);
+	}
 int getBalance()
-{
-	return Account.Balance;
-}
-void setBalance(int amt)
+	{
+		return Account.Balance;
+	}
+//void setBalance1(int amt)
 {
 	try
 	{
@@ -24,6 +40,7 @@ void setBalance(int amt)
 	{
 		
 	}
-	Account.Balance=amt;
+	
 }
+
 }
