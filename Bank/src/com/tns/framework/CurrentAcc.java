@@ -1,18 +1,31 @@
 package com.tns.framework;
 
-public abstract class CurrentAcc extends BankAcc
-{
+class creditLimit {
+	private creditLimit() {
+
+	}
+
+	public final creditLimit obj = new creditLimit();
+}
+
+public abstract class CurrentAcc extends BankAcc {
 	private final float creditLimit;
 
-	public CurrentAcc(int accNo, String accNm, float accBal, float creditLimit) {
-		super(accNo, accNm, accBal);
+	public static float getCreditLimit(float creditLimit) {
+
+		return creditLimit;
+
+	}
+
+	public CurrentAcc(int accNo, String accName, float accBal, float creditLimit) {
+		super(accNo, accName, accBal);
 		this.creditLimit = creditLimit;
 	}
 
 	@Override
-	public void withdraw(float accBal) {
-		// TODO Auto-generated method stub
-		super.withdraw(accBal);
+	public void withdraw(float withdrawal) {
+
+		super.withdraw(withdrawal);
 	}
 
 	@Override
@@ -20,4 +33,5 @@ public abstract class CurrentAcc extends BankAcc
 		return "CurrentAcc [creditLimit=" + creditLimit + ", toString()=" + super.toString() + ", getClass()="
 				+ getClass() + ", hashCode()=" + hashCode() + "]";
 	}
+
 }

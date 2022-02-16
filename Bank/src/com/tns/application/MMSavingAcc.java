@@ -2,24 +2,29 @@ package com.tns.application;
 
 import com.tns.framework.SavingAcc;
 
-public class MMSavingAcc extends SavingAcc
-{
-	private float MINBAL;
-	public MMSavingAcc(int accNo, String accNm, float accBal, boolean isSalaried) {
-		super(accNo, accNm, accBal, isSalaried);
-		// TODO Auto-generated constructor stub
+public class MMSavingAcc extends SavingAcc {
+
+	
+	public MMSavingAcc(int accNo, String accName, float accBal, boolean isSalaried) {
+		super(accNo, accName, accBal, isSalaried);
+
 	}
 
+	
+
 	@Override
-	public void withdraw(float accBal) {
-		// TODO Auto-generated method stub
-		super.withdraw(accBal);
+	public void withdraw(float withdrawal) {
+
+		super.withdraw(withdrawal);
 	}
+
+
 
 	@Override
 	public String toString() {
-		return "MMSavingsAcc [toString()=" + super.toString() + ", getClass()=" + getClass() + ", hashCode()="
+		return "MMSavingAcc [toString()=" + super.toString() + ", getClass()=" + getClass() + ", hashCode()="
 				+ hashCode() + "]";
 	}
+
 	
 }

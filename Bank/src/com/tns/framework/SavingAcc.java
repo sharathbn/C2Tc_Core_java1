@@ -1,18 +1,19 @@
 package com.tns.framework;
 
-public abstract class SavingAcc extends BankAcc
-{
+public abstract class SavingAcc extends BankAcc {
 	private boolean isSalaried;
-	final static private float MINBAL=500;
-	public SavingAcc(int accNo, String accNm, float accBal, boolean isSalaried) {
-		super(accNo, accNm, accBal);
+
+	private static final float MINBAL = 1000;
+
+	public SavingAcc(int accNo, String accName, float accBal, boolean isSalaried) {
+		super(accNo, accName, accBal);
 		this.isSalaried = isSalaried;
 	}
 
 	@Override
-	public void withdraw(float accBal) {
-		// TODO Auto-generated method stub
-		super.withdraw(accBal);
+	public void withdraw(float withdrawal) {
+
+		super.withdraw(withdrawal);
 	}
 
 	@Override
@@ -20,5 +21,5 @@ public abstract class SavingAcc extends BankAcc
 		return "SavingAcc [isSalaried=" + isSalaried + ", toString()=" + super.toString() + ", getClass()=" + getClass()
 				+ ", hashCode()=" + hashCode() + "]";
 	}
-	
+
 }
